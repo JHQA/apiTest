@@ -15,11 +15,11 @@ cursorData = resp.json()['cursor']
 
 class TestMarketList(unittest.TestCase):
 
-    # Verify the markets api status code is 200
+    # Verify the /markets api status code is 200
     def test_status(self):
         self.assertEqual(resp.status_code, 200, ' The wrong status code appears /markets')
     
-    # Verify the headers content-type is application/json
+    # Verify the /markets headers content-type is application/json
     def test_headers(self):
         self.assertEqual(resp.headers.get('Content-Type'), 'application/json', ' The wrong header content-type appears /markets')
 

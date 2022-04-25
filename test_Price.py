@@ -34,7 +34,7 @@ class TestPrices(unittest.TestCase):
         self.assertGreaterEqual(allowData['remaining'], 0, '/market/prices allowance remaining was not greater or equal to zero')
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", '/market/prices upgrade message was incorrect')
 
-    # Verify the bitfinex btcusd price endpoint
+    # Verify the bitfinex/btcusd/price endpoint
     def test_bitfinex_btcusd(self):
         resp = requests.get(url + bitfinex_btcusd + '/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -47,7 +47,7 @@ class TestPrices(unittest.TestCase):
         self.assertGreaterEqual(allowData['remaining'], 0, 'bitfinex btcusd allowance remaining was not greater or equal to zero')
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex btcusd upgrade message was incorrect')
 
-    # Verify the bitfinex ltcusd price endpoint
+    # Verify the bitfinex/ltcusd/price endpoint
     def test_bitfinex_ltcusd(self):
         resp = requests.get(url + bitfinex_ltcusd + '/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -60,7 +60,7 @@ class TestPrices(unittest.TestCase):
         self.assertGreaterEqual(allowData['remaining'], 0, 'bitfinex ltcusd allowance remaining was not greater or equal to zero')
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex ltcusd upgrade message was incorrect')
 
-    # Verify the bitfinex ltcbtc price endpoint
+    # Verify the bitfinex/ltcbtc/price endpoint
     def test_bitfinex_ltcbtc(self):
         resp = requests.get(url + bitfinex_ltcbtc + '/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -73,7 +73,7 @@ class TestPrices(unittest.TestCase):
         self.assertGreaterEqual(allowData['remaining'], 0, 'bitfinex ltcbtc remaining was not greater or equal to zero')
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex ltcbtc upgrade message was incorrect')
 
-    # Verify the bitfinex ethusd price endpoint
+    # Verify the bitfinex/ethusd/price endpoint
     def test_bitfinex_ethusd(self):
         resp = requests.get(url + bitfinex_ethusd + '/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -87,7 +87,7 @@ class TestPrices(unittest.TestCase):
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex ethusd upgrade message was incorrect')
 
 
-    # Verify the bitfinex ethbtc price endpoint
+    # Verify the bitfinex/ethbtc/price endpoint
     def test_bitfinex_ethbtc(self):
         resp = requests.get(url + bitfinex_ethbtc +'/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']

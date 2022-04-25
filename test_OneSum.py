@@ -16,7 +16,7 @@ options = {'limit': 5, 'timeout':4}
 
 class TestOneSum(unittest.TestCase):
 
-    # Verify the bitfinex btcusd summary endpoint
+    # Verify the bitfinex/btcusd/summary endpoint
     def test_bitfinex_btcusd_summary(self):
         resp = requests.get(url + bitfinex_btcusd + '/summary', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -36,7 +36,7 @@ class TestOneSum(unittest.TestCase):
         self.assertGreaterEqual(allowData['remaining'], 0, 'bitfinex/btcusd/summary allowance remaining was not greater or equal to zero')
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex/btcusd/summary upgrade message was incorrect')
 
-    # Verify the bitfinex ltcusd summary endpoint
+    # Verify the bitfinex/ltcusd/summary endpoint
     def test_bitfinex_ltcusd_summary(self):
         resp = requests.get(url + bitfinex_ltcusd + '/summary', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -56,7 +56,7 @@ class TestOneSum(unittest.TestCase):
         self.assertGreaterEqual(allowData['remaining'], 0, 'bitfinex/ltcusd/trades allowance remaining was not greater or equal to zero')
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex/ltcusd/trades upgrade message was incorrect')
 
-    # Verify the bitfinex ltcbtc summary endpoint
+    # Verify the bitfinex/ltcbtc/summary endpoint
     def test_bitfinex_ltcbtc_summary(self):
         resp = requests.get(url + bitfinex_ltcbtc + '/summary', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -76,7 +76,7 @@ class TestOneSum(unittest.TestCase):
         self.assertGreaterEqual(allowData['remaining'], 0, 'bitfinex/ltcbtc/summary allowance remaining was not greater or equal to zero')
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex/ltcbtc/summary upgrade message was incorrect')
 
-    # Verify the bitfinex ethusd summary endpoint
+    # Verify the bitfinex/ethusd/summary endpoint
     def test_bitfinex_ethusd_summary(self):
         resp = requests.get(url + bitfinex_ethusd + '/summary', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -96,7 +96,7 @@ class TestOneSum(unittest.TestCase):
         self.assertGreaterEqual(allowData['remaining'], 0, 'bitfinex/ethusd/summary allowance remaining was not greater or equal to zero')
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex/ethusd/summary upgrade message was incorrect')
 
-    # Verify the bitfinex ethbtc summary endpoint
+    # Verify the bitfinex/ethbtc/summary endpoint
     def test_bitfinex_ethbtc_summary(self):
         resp = requests.get(url + bitfinex_ethbtc + '/summary', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']

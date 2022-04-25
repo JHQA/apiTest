@@ -16,7 +16,7 @@ options = {'limit': 5, 'timeout':4}
 
 class TestDetails(unittest.TestCase):
 
-    # Verify the bitfinex btcusd endpoint
+    # Verify the markets/bitfinex/btcusd endpoint
     def test_bitfinex_btcusd(self):
         resp = requests.get(url + bitfinex_btcusd, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -24,13 +24,13 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(resp.status_code, 200, ' The wrong status code appears')
         self.assertEqual(resp.headers.get('Content-Type'), 'application/json', ' The wrong header content type appears')
         self.assertEqual(jsonData['id'], 1, 'market btcusd has an incorrect ID')
-        self.assertEqual(jsonData['exchange'], 'bitfinex', 'market btcusd has an incorrect exchange')
-        self.assertEqual(jsonData['pair'], 'btcusd', 'market btcusd has an incorrect pair')
-        self.assertEqual(jsonData['active'], True, 'market btcusd is not active')
+        self.assertEqual(jsonData['exchange'], 'bitfinex', 'market /bitfinex/btcusd has an incorrect exchange')
+        self.assertEqual(jsonData['pair'], 'btcusd', 'market /bitfinex/btcusd has an incorrect pair')
+        self.assertEqual(jsonData['active'], True, 'market /bitfinex/btcusd is not active')
 
-        self.assertGreater(allowData['cost'], 0, 'bitfinex btcusd allowance cost was not greater than zero')
-        self.assertGreaterEqual(allowData['remaining'], 0, 'bitfinex btcusd allowance remaining was not greater or equal to zero')
-        self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex btcusd upgrade message was incorrect')
+        self.assertGreater(allowData['cost'], 0, '/bitfinex/btcusd allowance cost was not greater than zero')
+        self.assertGreaterEqual(allowData['remaining'], 0, '/bitfinex/btcusd allowance remaining was not greater or equal to zero')
+        self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", '/bitfinex/btcusd upgrade message was incorrect')
 
         self.assertEqual(jsonData['routes']['price'], "https://api.cryptowat.ch/markets/bitfinex/btcusd/price", 'bitfinex btcusd has an incorrect price route')
         self.assertEqual(jsonData['routes']['summary'], "https://api.cryptowat.ch/markets/bitfinex/btcusd/summary", 'bitfinex btcusd has an incorrect summary route')
@@ -38,7 +38,7 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(jsonData['routes']['trades'], "https://api.cryptowat.ch/markets/bitfinex/btcusd/trades", 'bitfinex btcusd has an incorrect trades route')
         self.assertEqual(jsonData['routes']['ohlc'], "https://api.cryptowat.ch/markets/bitfinex/btcusd/ohlc", 'bitfinex btcusd has an incorrect ohlc route')
 
-    # Verify the bitfinex ltcusd endpoint
+    # Verify the markets/bitfinex/ltcusd endpoint
     def test_bitfinex_ltcusd(self):
         resp = requests.get(url + bitfinex_ltcusd, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -46,9 +46,9 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(resp.status_code, 200, ' The wrong status code appears')
         self.assertEqual(resp.headers.get('Content-Type'), 'application/json', ' The wrong header content type appears')
         self.assertEqual(jsonData['id'], 2, 'market ltcusd has an incorrect ID')
-        self.assertEqual(jsonData['exchange'], 'bitfinex', 'market ltcusd has an incorrect exchange')
-        self.assertEqual(jsonData['pair'], 'ltcusd', 'market ltcusd has an incorrect pair')
-        self.assertEqual(jsonData['active'], True, 'market ltcusd is not active')
+        self.assertEqual(jsonData['exchange'], 'bitfinex', 'market /bitfinex/ltcusd has an incorrect exchange')
+        self.assertEqual(jsonData['pair'], 'ltcusd', 'market /bitfinex/ltcusd has an incorrect pair')
+        self.assertEqual(jsonData['active'], True, 'market /bitfinex/ltcusd is not active')
 
         self.assertGreater(allowData['cost'], 0, 'bitfinex ltcusd allowance cost was not greater than zero')
         self.assertGreaterEqual(allowData['remaining'], 0, 'bitfinex ltcusd allowance remaining was not greater or equal to zero')
@@ -60,7 +60,7 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(jsonData['routes']['trades'], "https://api.cryptowat.ch/markets/bitfinex/ltcusd/trades", 'bitfinex ltcusd has an incorrect trades route')
         self.assertEqual(jsonData['routes']['ohlc'], "https://api.cryptowat.ch/markets/bitfinex/ltcusd/ohlc", 'bitfinex ltcusd has an incorrect ohlc route')
 
-    # Verify the bitfinex ltcbtc endpoint
+    # Verify the markets/bitfinex/ltcbtc endpoint
     def test_bitfinex_ltcbtc(self):
         resp = requests.get(url + bitfinex_ltcbtc, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -82,7 +82,7 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(jsonData['routes']['trades'], "https://api.cryptowat.ch/markets/bitfinex/ltcbtc/trades", 'bitfinex ltcbtc has an incorrect trades route')
         self.assertEqual(jsonData['routes']['ohlc'], "https://api.cryptowat.ch/markets/bitfinex/ltcbtc/ohlc", 'bitfinex ltcbtc has an incorrect ohlc route')
 
-    # Verify the bitfinex ethusd endpoint
+    # Verify the markets/bitfinex/ethusd endpoint
     def test_bitfinex_ethusd(self):
         resp = requests.get(url + bitfinex_ethusd, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
@@ -104,7 +104,7 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(jsonData['routes']['trades'], "https://api.cryptowat.ch/markets/bitfinex/ethusd/trades", 'bitfinex ethusd has an incorrect trades route')
         self.assertEqual(jsonData['routes']['ohlc'], "https://api.cryptowat.ch/markets/bitfinex/ethusd/ohlc", 'bitfinex ethusd has an incorrect ohlc route')
 
-    # Verify the bitfinex ethbtc endpoint
+    # Verify the markets/bitfinex/ethbtc endpoint
     def test_bitfinex_ethbtc(self):
         resp = requests.get(url + bitfinex_ethbtc, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
