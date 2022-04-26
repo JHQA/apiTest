@@ -2,8 +2,8 @@ import unittest
 import requests
 
 # Credentials
-email = 'JHQA@outlook.com'
-apiKey = '023ERZMP4F4O8GXC5MK7'
+email = ''
+apiKey = ''
 
 # API point and options
 url = 'https://api.cryptowat.ch/markets'
@@ -15,9 +15,9 @@ bitfinex_ethbtc = '/bitfinex/ethbtc'
 options = {'limit': 5,'timeout':4}
 
 class TestOrderbookLiquidity(unittest.TestCase):
-    
+
     # Verify the /bitfinex/btcusd/orderbook/liquidity endpoint
-    def test_bitfinex_btcusd_orderbook(self):
+    def test_bitfinex_btcusd_orderbook_liquidity(self):
         resp = requests.get(url + bitfinex_btcusd +'/orderbook/liquidity', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -73,7 +73,7 @@ class TestOrderbookLiquidity(unittest.TestCase):
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", '/bitfinex/btcusd/orderbook/liquidity upgrade message was incorrect')
 
     # Verify the /bitfinex/ltcusd/orderbook/liquidity endpoint
-    def test_bitfinex_ltcusd_orderbook(self):
+    def test_bitfinex_ltcusd_orderbook_liquidity(self):
         resp = requests.get(url + bitfinex_ltcusd +'/orderbook/liquidity', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -130,7 +130,7 @@ class TestOrderbookLiquidity(unittest.TestCase):
 
 
     # Verify the /bitfinex/ltcbtc/orderbook/liquidity endpoint
-    def test_bitfinex_ltcbtc_orderbook(self):
+    def test_bitfinex_ltcbtc_orderbook_liquidity_liquidity(self):
         resp = requests.get(url + bitfinex_ltcbtc +'/orderbook/liquidity', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -186,7 +186,7 @@ class TestOrderbookLiquidity(unittest.TestCase):
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", '/bitfinex/ltcbtc/orderbook/liquidity upgrade message was incorrect')
 
     # Verify the /bitfinex/ethusd/orderbook/liquidity endpoint
-    def test_bitfinex_ethusd_orderbook(self):
+    def test_bitfinex_ethusd_orderbook_liquidity(self):
         resp = requests.get(url + bitfinex_ethusd +'/orderbook/liquidity', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -242,7 +242,7 @@ class TestOrderbookLiquidity(unittest.TestCase):
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", '/bitfinex/ltcbtc/orderbook/liquidity upgrade message was incorrect')
     
     # Verify the /bitfinex/ethbtc/orderbook/liquidity endpoint
-    def test_bitfinex_ethbtc_orderbook(self):
+    def test_bitfinex_ethbtc_orderbook_liquidity(self):
         resp = requests.get(url + bitfinex_ethbtc +'/orderbook/liquidity', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
