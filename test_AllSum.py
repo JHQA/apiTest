@@ -14,6 +14,7 @@ jsonData = resp.json()['result']
 allowData = resp.json()['allowance']
 cursorData = resp.json()['cursor']
 
+# Verify the markets/summaries endpoint
 class TestAllSum(unittest.TestCase):
 
     # Verify the markets/summaries api status code is 200
