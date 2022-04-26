@@ -14,7 +14,7 @@ bitfinex_ethusd = '/bitfinex/ethusd'
 bitfinex_ethbtc = '/bitfinex/ethbtc'
 options = {'limit': 5,'timeout':4}
 
-class TestPrices(unittest.TestCase):
+class TestOrderbook(unittest.TestCase):
 
     # Verify the /bitfinex/btcusd/orderbook endpoint
     def test_bitfinex_btcusd_orderbook(self):

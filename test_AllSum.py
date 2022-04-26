@@ -37,7 +37,7 @@ class TestAllSum(unittest.TestCase):
     def test_ethbtc(self):
         self.assertGreaterEqual(jsonData['bitfinex:ethbtc']['price']['high'], jsonData['bitfinex:ethbtc']['price']['low'], 'summaries bitfinex/ethbtc the high price was not larger than the low')
         self.assertTrue(jsonData['bitfinex:ethbtc']['price']['low'] <= jsonData['bitfinex:ethbtc']['price']['last'] <= jsonData['bitfinex:ethbtc']['price']['high'], 'summaries bitfinex/ethbtc the last price was not between high and low')
-        self.assertTrue(type(jsonData['bitfinex:ethbtc']['price']['change']['percentage']) == int or float, 'summaries bitfinex/ethbtc change percentage was not a numbe')
+        self.assertTrue(type(jsonData['bitfinex:ethbtc']['price']['change']['percentage']) == int or float, 'summaries bitfinex/ethbtc change percentage was not a number')
         self.assertTrue(type(jsonData['bitfinex:ethbtc']['price']['change']['absolute']) == int or float, 'summaries bitfinex/ethbtc change absolute was not a number')
         self.assertGreater(jsonData['bitfinex:ethbtc']['volume'], 0, 'summaries bitfinex/ethbtc volume was not greater than zero')
         self.assertGreater(jsonData['bitfinex:ethbtc']['volumeQuote'], 0, 'summaries bitfinex/ethbtc volume was not greater than zero')
@@ -46,7 +46,7 @@ class TestAllSum(unittest.TestCase):
     def test_ethusd(self):
         self.assertGreaterEqual(jsonData['bitfinex:ethusd']['price']['high'], jsonData['bitfinex:ethusd']['price']['low'], 'summaries bitfinex/ethusd the high price was not larger than the low')
         self.assertTrue(jsonData['bitfinex:ethusd']['price']['low'] <= jsonData['bitfinex:ethusd']['price']['last'] <= jsonData['bitfinex:ethusd']['price']['high'], 'summaries bitfinex/ethusd the last price was not between high and low')
-        self.assertTrue(type(jsonData['bitfinex:ethusd']['price']['change']['percentage']) == int or float, 'summaries bitfinex/ethusd change percentage was not a numbe')
+        self.assertTrue(type(jsonData['bitfinex:ethusd']['price']['change']['percentage']) == int or float, 'summaries bitfinex/ethusd change percentage was not a number')
         self.assertTrue(type(jsonData['bitfinex:ethusd']['price']['change']['absolute']) == int or float, 'summaries bitfinex/ethusd change absolute was not a number')
         self.assertGreater(jsonData['bitfinex:ethusd']['volume'], 0, 'summaries bitfinex/ethusd volume was not greater than zero')
         self.assertGreater(jsonData['bitfinex:ethusd']['volumeQuote'], 0, 'summaries bitfinex/ethusd volume was not greater than zero')
@@ -55,7 +55,7 @@ class TestAllSum(unittest.TestCase):
     def test_ltcbtc(self):
         self.assertGreaterEqual(jsonData['bitfinex:ltcbtc']['price']['high'], jsonData['bitfinex:ltcbtc']['price']['low'], 'summaries bitfinex/ltcbtc the high price was not larger than the low')
         self.assertTrue(jsonData['bitfinex:ltcbtc']['price']['low'] <= jsonData['bitfinex:ltcbtc']['price']['last'] <= jsonData['bitfinex:ltcbtc']['price']['high'], 'summaries bitfinex/ltcbtc the last price was not between high and low')
-        self.assertTrue(type(jsonData['bitfinex:ltcbtc']['price']['change']['percentage']) == int or float, 'summaries bitfinex/ltcbtc change percentage was not a numbe')
+        self.assertTrue(type(jsonData['bitfinex:ltcbtc']['price']['change']['percentage']) == int or float, 'summaries bitfinex/ltcbtc change percentage was not a number')
         self.assertTrue(type(jsonData['bitfinex:ltcbtc']['price']['change']['absolute']) == int or float, 'summaries bitfinex/ltcbtc change absolute was not a number')
         self.assertGreater(jsonData['bitfinex:ltcbtc']['volume'], 0, 'summaries bitfinex/ltcbtc volume was not greater than zero')
         self.assertGreater(jsonData['bitfinex:ltcbtc']['volumeQuote'], 0, 'summaries bitfinex/ltcbtc volume was not greater than zero')
@@ -64,7 +64,7 @@ class TestAllSum(unittest.TestCase):
     def test_ltcusd(self):
         self.assertGreaterEqual(jsonData['bitfinex:ltcusd']['price']['high'], jsonData['bitfinex:ltcusd']['price']['low'], 'summaries bitfinex/ltcusd the high price was not larger than the low')
         self.assertTrue(jsonData['bitfinex:ltcusd']['price']['low'] <= jsonData['bitfinex:ltcusd']['price']['last'] <= jsonData['bitfinex:ltcusd']['price']['high'], 'summaries bitfinex/ltcusd the last price was not between high and low')
-        self.assertTrue(type(jsonData['bitfinex:ltcusd']['price']['change']['percentage']) == int or float, 'summaries bitfinex/ltcusd change percentage was not a numbe')
+        self.assertTrue(type(jsonData['bitfinex:ltcusd']['price']['change']['percentage']) == int or float, 'summaries bitfinex/ltcusd change percentage was not a number')
         self.assertTrue(type(jsonData['bitfinex:ltcusd']['price']['change']['absolute']) == int or float, 'summaries bitfinex/ltcusd price absolute was not a number')
         self.assertGreater(jsonData['bitfinex:ltcusd']['volume'], 0, 'summaries bitfinex/ltcusd volume was not greater than zero')
         self.assertGreater(jsonData['bitfinex:ltcusd']['volumeQuote'], 0, 'summaries bitfinex/ltcusd volume was not greater than zero')
