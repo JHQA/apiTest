@@ -1,5 +1,5 @@
 -To get started-
-Add user name and key the credential portion of every test file.
+Add a user email and key to the credential portion of every test file.
 
     # Credentials
     email = ''
