@@ -14,6 +14,7 @@ bitfinex_ethusd = '/bitfinex/ethusd'
 bitfinex_ethbtc = '/bitfinex/ethbtc'
 options = {'limit': 5,'timeout':4}
 
+# Verify https://api.cryptowat.ch/markets/:exchange/:pair/orderbook/liquidity
 class TestOrderbookLiquidity(unittest.TestCase):
 
     # Verify the /bitfinex/btcusd/orderbook/liquidity endpoint

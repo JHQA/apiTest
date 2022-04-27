@@ -13,6 +13,7 @@ jsonData = resp.json()['result']
 allowData = resp.json()['allowance']
 cursorData = resp.json()['cursor']
 
+# Verify https://api.cryptowat.ch/markets
 class TestMarketList(unittest.TestCase):
 
     # Verify the /markets api status code is 200

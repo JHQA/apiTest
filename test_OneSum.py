@@ -14,8 +14,8 @@ bitfinex_ethusd = '/bitfinex/ethusd'
 bitfinex_ethbtc = '/bitfinex/ethbtc'
 options = {'limit': 5, 'timeout':4}
 
+# Verify https://api.cryptowat.ch/markets/:exchange/:pair/summary
 class TestOneSum(unittest.TestCase):
-
     # Verify the bitfinex/btcusd/summary endpoint
     def test_bitfinex_btcusd_summary(self):
         resp = requests.get(url + bitfinex_btcusd + '/summary', auth=(email, apiKey), params= options)

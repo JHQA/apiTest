@@ -18,6 +18,7 @@ options = {'timeout':4}
 typeInt = '?amount=50'
 typeFloat = '?amount=12.5'
 
+# Verify https://api.cryptowat.ch/markets/:exchange/:pair/orderbook/calculator
 class TestOrderbookCalculator(unittest.TestCase):
     
     # Verify the /bitfinex/btcusd/orderbook/calculator endpoint amount as an integer 

@@ -14,6 +14,8 @@ bitfinex_ethusd = '/bitfinex/ethusd'
 bitfinex_ethbtc = '/bitfinex/ethbtc'
 options = {'timeout':4}
 
+#Verify https://api.cryptowat.ch/markets/prices
+#Verify https://api.cryptowat.ch/markets/:exchange/:pair/price
 class TestPrices(unittest.TestCase):
 
     # Verify the market/prices endpoint
