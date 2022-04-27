@@ -17,7 +17,7 @@ options = {'limit': 5, 'timeout':4}
 class TestDetails(unittest.TestCase):
 
     # Verify the markets/bitfinex/btcusd endpoint
-    def test_bitfinex_btcusd(self):
+    def test_bitfinex_btcusd_details(self):
         resp = requests.get(url + bitfinex_btcusd, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -39,7 +39,7 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(jsonData['routes']['ohlc'], "https://api.cryptowat.ch/markets/bitfinex/btcusd/ohlc", 'bitfinex btcusd has an incorrect ohlc route')
 
     # Verify the markets/bitfinex/ltcusd endpoint
-    def test_bitfinex_ltcusd(self):
+    def test_bitfinex_ltcusd_details(self):
         resp = requests.get(url + bitfinex_ltcusd, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -61,7 +61,7 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(jsonData['routes']['ohlc'], "https://api.cryptowat.ch/markets/bitfinex/ltcusd/ohlc", 'bitfinex ltcusd has an incorrect ohlc route')
 
     # Verify the markets/bitfinex/ltcbtc endpoint
-    def test_bitfinex_ltcbtc(self):
+    def test_bitfinex_ltcbtc_details(self):
         resp = requests.get(url + bitfinex_ltcbtc, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -83,7 +83,7 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(jsonData['routes']['ohlc'], "https://api.cryptowat.ch/markets/bitfinex/ltcbtc/ohlc", 'bitfinex ltcbtc has an incorrect ohlc route')
 
     # Verify the markets/bitfinex/ethusd endpoint
-    def test_bitfinex_ethusd(self):
+    def test_bitfinex_ethusd_details(self):
         resp = requests.get(url + bitfinex_ethusd, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -105,7 +105,7 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(jsonData['routes']['ohlc'], "https://api.cryptowat.ch/markets/bitfinex/ethusd/ohlc", 'bitfinex ethusd has an incorrect ohlc route')
 
     # Verify the markets/bitfinex/ethbtc endpoint
-    def test_bitfinex_ethbtc(self):
+    def test_bitfinex_ethbtc_details(self):
         resp = requests.get(url + bitfinex_ethbtc, auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']

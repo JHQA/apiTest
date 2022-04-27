@@ -35,7 +35,7 @@ class TestPrices(unittest.TestCase):
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", '/market/prices upgrade message was incorrect')
 
     # Verify the bitfinex/btcusd/price endpoint
-    def test_bitfinex_btcusd(self):
+    def test_bitfinex_btcusd_prices(self):
         resp = requests.get(url + bitfinex_btcusd + '/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -48,7 +48,7 @@ class TestPrices(unittest.TestCase):
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex btcusd upgrade message was incorrect')
 
     # Verify the bitfinex/ltcusd/price endpoint
-    def test_bitfinex_ltcusd(self):
+    def test_bitfinex_ltcusd_prices(self):
         resp = requests.get(url + bitfinex_ltcusd + '/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -61,7 +61,7 @@ class TestPrices(unittest.TestCase):
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex ltcusd upgrade message was incorrect')
 
     # Verify the bitfinex/ltcbtc/price endpoint
-    def test_bitfinex_ltcbtc(self):
+    def test_bitfinex_ltcbtc_prices(self):
         resp = requests.get(url + bitfinex_ltcbtc + '/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -74,7 +74,7 @@ class TestPrices(unittest.TestCase):
         self.assertEqual(allowData['upgrade'], "For unlimited API access, create an account at https://cryptowat.ch", 'bitfinex ltcbtc upgrade message was incorrect')
 
     # Verify the bitfinex/ethusd/price endpoint
-    def test_bitfinex_ethusd(self):
+    def test_bitfinex_ethusd_prices(self):
         resp = requests.get(url + bitfinex_ethusd + '/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']
@@ -88,7 +88,7 @@ class TestPrices(unittest.TestCase):
 
 
     # Verify the bitfinex/ethbtc/price endpoint
-    def test_bitfinex_ethbtc(self):
+    def test_bitfinex_ethbtc_prices(self):
         resp = requests.get(url + bitfinex_ethbtc +'/price', auth=(email, apiKey), params= options)
         jsonData = resp.json()['result']
         allowData = resp.json()['allowance']

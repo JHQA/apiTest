@@ -1,5 +1,5 @@
 -To get started-
-Add user name and key the credential portion of every test file.
+Add a user email and key the credential portion of every test file.
 
     # Credentials
     email = ''
@@ -8,7 +8,7 @@ Add user name and key the credential portion of every test file.
 Make sure to have requests library installed(pip install requests).
 Navigate to the main folder containing the tests.
 Type 'Python -m unittest' in terminal to run the full suite, 64 total tests.
-Add the file name to only run that specific test, such as 'Python3 -m unittest test_List.py'.
+Add the file name to only run that specific test, such as 'Python -m unittest test_List.py'.
 
 -What are these tests?-
 Each file contains at least 5 general tests of an api endpoint, verifying every market output.
